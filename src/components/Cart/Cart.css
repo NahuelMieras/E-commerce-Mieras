@@ -1,0 +1,51 @@
+.btnFinalizarCompra{
+    text-decoration: none;
+    color: white;
+    background-color: #9b1b86;
+    padding: 10px 30px;
+    margin: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnFinalizarCompra:hover {
+    color: #9b1b86;
+    background-color: #9b1b8642;
+}
+
+.btnProductos{
+    text-decoration: none;
+    color: white;
+    background-color: #9b1b86;
+    padding: 10px 30px;
+    margin: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnProductos:hover{
+    color: #9b1b86;
+    background-color: #9b1b8642;
+}
+
+.contenederSinProductos{
+    margin: 5rem 0 2rem;
+}
+
+.contenedorCart{
+    display: grid;
+    justify-content: start;
+}
+
+.contenedorCartProducto{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 2;
+    align-items: start;
+}
+
+.contenedorCartBtns{
+
+}

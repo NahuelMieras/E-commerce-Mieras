@@ -1,6 +1,10 @@
+.wrapperProductos{
+    max-width: 1100px;
+}
 
-.contenedorProductos {
+.wrapProductos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }

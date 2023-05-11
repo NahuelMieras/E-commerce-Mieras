@@ -1,20 +1,28 @@
+
 .btnContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 button{
-    background-color: #9b1b86;
-    border: none;
-    color:  white;
-    padding: 10px 20px;
-    text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    color: white;
+    background-color: #9b1b86;
+    padding: 10px 30px;
     margin: 5px;
+    border-radius: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    border-radius: 2rem;
+}
 
+button:hover {
+    color: #9b1b86;
+    background-color:#9b1b8642;
+}
+
+.btnContador{
+    padding: 7px 12px;
 }
 
 p{

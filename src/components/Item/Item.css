@@ -1,10 +1,11 @@
 
 .cardProducto {
-    border: 1px solid #e3e1e1;
+    background-color: #fafafa;
+    box-shadow: 3px 3px 6px 2px rgb(211, 211, 211);
     width: 20rem;
     max-height: 500px;
     padding: 1rem;
-    margin: 0.5rem;
+    margin: 0.3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +21,9 @@ p {
 }
 
 .imgProducto {
-    width: 150px;
+    width: 30vw;
     max-height: 150px;
+    margin: 3rem;
     object-fit: contain;
     border-radius:4rem;
 }
@@ -37,11 +39,23 @@ p {
     margin: 1rem;
 }
 
+.btnProducto:hover {
+    color: #9b1b86;
+    background-color: #9b1b8642;
+}
+
 .btnDetalles{
     text-decoration: none;
     color: white;
+    font-weight: bold;
     background-color: #9b1b86;
     padding: 0.7rem 1.3rem;
-    margin: 2rem;
-    border-radius: 2rem;
+    margin: 5px;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btnDetalles:hover {
+    color: #9b1b86;
+    background-color: #9b1b8642;
 }

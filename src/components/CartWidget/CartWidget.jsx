@@ -1,22 +1,19 @@
-import React from 'react'
-import { useRef } from 'react'
 import './CartWidget.css'
+import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { CarritoContext } from '../../context/CarritoContext';
 
 const CartWidget = () => {
-
-    const cartCount = useRef(0);
-
-    function cartAdd() {
-        cartCount.current = cartCount.current + 1;
-        console.log(cartCount.current)
-    }
-
+    const { carrito } = useContext(CarritoContext);
+    const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
     const imgCarrito = 'https://cdn-icons-png.flaticon.com/512/107/107831.png'
     return (
-        <div className='carrito'>
+        <Link to="/" className='carrito'>
             <img className='imgCarrito' src={imgCarrito} alt="carrito de compra" />
-            <strong onClick={cartAdd}>{cartCount.current}</strong>
-        </div>
+            {
+                totalCantidad
+            }
+        </Link>
     )
 }
 

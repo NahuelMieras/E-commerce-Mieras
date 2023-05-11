@@ -2,27 +2,35 @@ import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { CarritoContext } from '../../context/CarritoContext';
+import { useContext } from 'react';
 
-const IteamDetail = ({ id, nombre, precio, img, stock }) => {
+const ItemDetail = ({ id, nombre, precio, img, stock }) => {
 
     const [agregarCantidad, setAgregarCantidad] = useState(0);
 
+    const { agregarProducto } = useContext(CarritoContext);
+
     const handle = (cantidad) => {
         setAgregarCantidad(cantidad);
-        console.log("Productos agregagos: " + cantidad);
+
+        const item = { id, nombre, precio };
+        agregarProducto(item, cantidad);
     }
     return (
-        <div className='contenedorItem'>
-            <h2>Nombre: {nombre}</h2>
-            <h3>Precio: {precio}</h3>
-            <h3>ID: {id}</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia numquam vitae nostrum quas assumenda accusamus quaerat optio debitis doloribus quasi dolorem, ipsa inventore dolore exercitationem, labore adipisci, fugiat in impedit?</p>
-            <img src={img} alt={nombre} />
-            {
-                agregarCantidad > 0 ? (<Link to={"/cart"}> Terminar compra</Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={handle} />)
-            }
-        </div>
+        <>
+            <div className='contenedorItem'>
+                <h2>{nombre}</h2>
+                <h3>${precio}</h3>
+                <img src={img} alt={nombre} />
+                <div className='contenedorBtnTerminarCompra'>
+                    {
+                        agregarCantidad > 0 ? (<Link to="/cart" className='btnTerminarCompra'> Terminar compra </Link>) : (<ItemCount inicial={1} stock={stock} funcionAgregar={handle} />)
+                    }
+                </div>
+            </div>
+        </>
     )
 }
 
-export default IteamDetail
+export default ItemDetail

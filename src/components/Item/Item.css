@@ -14,6 +14,11 @@
 
 .productItem {
     margin-bottom: 0.5rem;
+    font-size: larger;
+}
+.prdocutItemPrice{
+    color: red;
+    font-size: x-large;
 }
 
 p {
@@ -22,10 +27,14 @@ p {
 
 .imgProducto {
     width: 30vw;
-    max-height: 150px;
+    max-height: 200px;
     margin: 3rem;
     object-fit: contain;
-    border-radius:4rem;
+}
+
+.imgProducto:hover{
+    transform: scale(1.5);
+    transition: 0.2s;
 }
 
 

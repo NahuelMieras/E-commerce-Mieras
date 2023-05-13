@@ -20,8 +20,8 @@ const ItemDetail = ({ id, nombre, precio, img, stock }) => {
     return (
         <>
             <div className='contenedorItem'>
-                <h2>{nombre}</h2>
-                <h3>${precio}</h3>
+                <h2 className='prdocutItemDetailTitle'>{nombre}</h2>
+                <h3 className='prdocutItemDetailPrice'>${precio}</h3>
                 <img src={img} alt={nombre} />
                 <div className='contenedorBtnTerminarCompra'>
                     {

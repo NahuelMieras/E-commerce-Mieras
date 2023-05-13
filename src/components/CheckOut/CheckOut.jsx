@@ -31,7 +31,6 @@ const Checkout = () => {
                 id: producto.item.id,
                 nombre: producto.item.nombre,
                 cantidad: producto.cantidad,
-                img: producto.item.img,
             })),
             total: carrito.reduce((total, producto) => total + producto.item.precio * producto.cantidad, 0),
             nombre,
@@ -56,9 +55,6 @@ const Checkout = () => {
             <form onSubmit={handleSubmit}>
                 {carrito.map((producto) => (
                     <div key={producto.item.id}>
-                        <p>
-                            <img src={producto.item.img} alt="" />
-                        </p>
                         <p className='productoCheckout'>
                             {producto.item.nombre} x {producto.cantidad}
                         </p>
@@ -67,6 +63,7 @@ const Checkout = () => {
                     </div>
                 ))
                 }
+                <hr />
                 <div className='contenedorDatosCheckout'>
                     <div className='datosCheckout'>
                         <label htmlFor="">Nombre y Apellido</label>

@@ -3,10 +3,15 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
     width: 50vw;
     border: 3px solid #9b1b86;
     border-radius: 20px;
     box-shadow: #9b1b86 2px 2px 8px;
+}
+
+.productoCheckout{
+    margin-top: 15px;
 }
 
 .datosCheckout {

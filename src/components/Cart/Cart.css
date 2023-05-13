@@ -16,8 +16,13 @@ h2{
     box-shadow: #9b1b86 2px 2px 8px;
 }
 
-.contenedorCartProducto{
+.cartProducto{
+    padding-bottom: 10px;
+    border-bottom: solid 1px black;
+}
 
+.cartProductoTotal{
+    color: rgb(188, 0, 0);
 }
 
 .contenedorCartBtns{

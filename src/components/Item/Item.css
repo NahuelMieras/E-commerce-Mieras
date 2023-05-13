@@ -28,7 +28,7 @@ p {
 .imgProducto {
     width: 30vw;
     max-height: 200px;
-    margin: 3rem;
+    margin: 3rem 0;
     object-fit: contain;
 }
 

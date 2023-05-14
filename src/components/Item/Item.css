@@ -30,6 +30,7 @@ p {
     max-height: 200px;
     margin: 3rem 0;
     object-fit: contain;
+    overflow: hidden;
 }
 
 .imgProducto:hover{
